@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Start git in docker and use it like a installed binary.
+
+docker run --rm -it -e http_proxy=$http_proxy -e https_proxy=$https_proxy --name git --volumes-from tmux -w $(pwd) axeclbr/git $@

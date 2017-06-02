@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Start git in docker and use it like a installed binary.
+
+docker run --rm -it -e http_proxy=$http_proxy -e https_proxy=$https_proxy --name nvim --volumes-from tmux -w $(pwd) kr1sp1n/alpine-neovim $@
